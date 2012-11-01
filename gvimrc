@@ -1,4 +1,4 @@
-set guifont=Source\ Code\ Pro:h12
+set guifont=Source\ Code\ Pro\ Light:h11
 set linespace=2
 set antialias
 

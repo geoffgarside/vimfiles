@@ -2,11 +2,21 @@ set nocompatible                " choose no compatibility with legacy vi
 set encoding=utf-8
 
 call pathogen#infect()
+call pathogen#helptags()
+
 filetype plugin indent on       " load file type plugins + indentation
 
 runtime macros/matchit.vim      " enables % to cycle through `if/else/endif`
 
 syntax enable
+
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "" Basic Config
 set number                      " line numbers (number|nonumber)
@@ -94,10 +104,10 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-# map <leader>ew :e %%
-# map <leader>es :sp %%
-# map <leader>ev :vsp %%
-# map <leader>et :tabe %%
+" map <leader>ew :e %%
+" map <leader>es :sp %%
+" map <leader>ev :vsp %%
+" map <leader>et :tabe %%
 
 let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=4
@@ -119,7 +129,9 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 set backupdir=~/.vim/backup     " where to put backup files.
-set directory=~/.vim/temp       " where to put swap files.
+set directory=~/.vim/tmp        " where to put swap files.
+set undodir=~/.vim/undos        " where to put undo files
+set undofile
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
