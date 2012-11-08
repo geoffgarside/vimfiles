@@ -86,6 +86,12 @@ if has("autocmd")
 
   " mark Jekyll YAML frontmatter as comment
   au BufNewFile,BufRead *.{md,markdown,html,xml} sy match Comment /\%^---\_.\{-}---$/
+
+  " Start with NerdTree if opened with a directory
+  au vimenter * if !argc() | NERDTree | endif
+
+  " Close vim if last buffer is NerdTree
+  au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
 " clear the search buffer when hitting return
