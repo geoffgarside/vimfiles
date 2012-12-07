@@ -118,6 +118,8 @@ map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=4
 
+nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 
