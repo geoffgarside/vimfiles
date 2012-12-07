@@ -119,6 +119,11 @@ let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=4
 
 nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
+            \ '\.o$', '\.so$', '\.egg$', '^\.git$', '\.os$', '\.dylib$', '\.a$',
+            \ '\.DS_Store$', '\.bundle$', '\.gitkeep$']
+let NERDTreeShowFiles=1           " Show hidden files, too
+let NERDTreeShowHidden=1
 
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
