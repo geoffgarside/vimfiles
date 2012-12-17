@@ -141,6 +141,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Mapping ESC in insert mode and command mode to double i
+imap ii <C-[>
+cmap ii <C-[>
+
 set backupdir=~/.vim/backup     " where to put backup files.
 set directory=~/.vim/tmp        " where to put swap files.
 set undodir=~/.vim/undos        " where to put undo files
