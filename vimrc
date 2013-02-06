@@ -164,9 +164,4 @@ if has("statusline") && !&cp
   set statusline+=Col:%v
   set statusline+=Buf:#%n
   set statusline+=[%b][0x%B]
-
-  " Powerline statusline config
-  let g:Powerline_symbols = 'fancy'
-  let g:Powerline_theme = 'solarized256'
-  let g:Powerline_colorscheme = 'solarized256'
 endif

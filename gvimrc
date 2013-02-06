@@ -12,3 +12,10 @@ if has("gui_macvim")
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 end
+
+if has("statusline") && !&cp
+  " Powerline statusline config
+  let g:Powerline_symbols = 'fancy'
+  let g:Powerline_theme = 'solarized256'
+  let g:Powerline_colorscheme = 'solarized256'
+endif
