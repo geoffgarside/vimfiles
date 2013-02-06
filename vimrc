@@ -11,7 +11,7 @@ runtime macros/matchit.vim      " enables % to cycle through `if/else/endif`
 syntax enable
 
 if has('gui_running')
-  set background=light
+  set background=dark
 else
   set background=dark
 endif
